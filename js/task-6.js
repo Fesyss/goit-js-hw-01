@@ -1,16 +1,14 @@
 'use strict';
 
 let total = 0;
-let number
-
+let number;
 do{
     number = prompt("Введіть число");
-    if (isNaN(number)){
+    if (Number.isNaN(Number(number))){
         alert('Було написано не число, спробуйте ще раз');
         continue
     }
     total += Number(number);
-}while (number != null );
+} while (number !== null);
 
-total = total;
 alert(`Загальна сума чисел дорівнює ${total}`);
